@@ -21,6 +21,7 @@ cleaned_telco1 = foreach cleaned_telco generate $0 as customerid,$1 as gender,(i
 STORE cleaned_telco1 INTO 'telco_upx.telco' USING org.apache.hive.hcatalog.pig.HCatStorer();
 
 5. Perform below analysis in Hue so as to visualize the results 
+
 i)  How tenure of customers is effecting churn rate
 select count(churn),tenure from telco_upx.telco where churn == 'Yes' group by tenure;
 
