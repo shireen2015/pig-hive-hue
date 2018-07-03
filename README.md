@@ -65,7 +65,7 @@ STORE cleaned_telco1 INTO 'telco_upx.telco' USING org.apache.hive.hcatalog.pig.H
 
    v. How many customers cancelled services offered by this company in the last month
 
-      select count(churn),churn from telco_upx.telco group by churn;
+       select count(churn),churn from telco_upx.telco group by churn;
 
    vi. Company waives off 10% for 1 year tenure customers, 20% for 2 year tenure customers and so on… 60% for 6 year tenure customers.          Calculate the new rates to be paid by these customers.
        
